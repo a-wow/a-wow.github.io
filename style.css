@@ -1,0 +1,293 @@
+/*
+
+Glow text animation using box shadow effects as a study of what can be accomplished with just css
+
+This is a component of a future homepage for an interactive narrative website which will be only use html and css. This was started to test my limits with css and to show that accessible and efficient design can just be limited to html and css.
+
+*/
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  display: flex;
+  flex-direction: flex-start;
+  align-items: flex-start;
+}
+
+body {
+  background-image: background-image: url("https://assets.codepen.io/7691942/cover-image.png");;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: #1b190f;
+}
+
+nav {
+  display: flex;
+  height: 20vw;
+  width: 100%;
+}
+
+header {
+  width: 80vw;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+/*
+Font: ITC AVANT GARDE GOTHIC PRO
+
+Uses discretionary ligatures and stylistic sets for the typeface
+*/
+
+.bold-AG {
+  font-family: itc-avant-garde-gothic-pro,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.medium-AG {
+  font-family: itc-avant-garde-gothic-pro,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.book-AG {
+  font-family: itc-avant-garde-gothic-pro,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*
+Title font, use <b> for bold weight, <i> for book weight, and unadorned <h1> for medium weight.
+*/
+h1 {
+  font-family: itc-avant-garde-gothic-pro,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  font-size: 6.667vw;
+  line-height: .25vw;
+  font-feature-settings: "ss01" 1, "ss03" 1, "kern" 1, "dlig" 1;
+}
+
+h2 {
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 2.667vw;
+  color: #fff;
+  line-height: .25vw;
+}
+
+.neon-text {
+  animation: flicker 6s linear infinite;
+}
+/*
+BRIEF:
+
+This animation transitions between 3 stages at differing speeds to mimic organic flickering in old neon signs.
+
+1 is the standard brightness which will be the basis state
+
+2 is the overbright state used for sudden flashes
+
+3 is the off stage, where only a faint glow inside the text remains.
+
+
+2:
+  color: white;
+  text-shadow:
+    0 0 0.3vw #fff,
+    0 0 0.521vw #fff,
+    0 0 1.094vw #fff,
+    0 0 2.188vw #FF5200,
+    0 0 4.271vw #FF5200,
+    0 0 4.792vw #FF5200,
+    0 0 5.313vw #FF5200,
+    0 0 7.865vw #FF5200;
+1:
+    opacity: 75%;
+    color: white;
+    text-shadow:
+      0 0 1vw #FF5200,
+      0 0 2vw #FF5200,
+      0 0 2.5vw #FF5200,
+      0 0 3vw #FF5200,
+      0 0 4vw #FF5200;
+3:
+    opacity: 25%;
+    color: transparent;
+    text-shadow:
+    0 0 0.3vw #FF5200,
+    0 0 0.521vw #FF5200;
+
+the stages of animation were figured out manually by studying stock footage of a neon sign flickering.
+*/
+
+@keyframes flicker {
+  0% {
+    /*3*/
+    opacity: 25%;
+    color: transparent;
+    text-shadow:
+    0 0 0.3vw #FF5200,
+    0 0 0.521vw #FF5200;
+  } 3.3% {
+    /*3*/
+    opacity: 25%;
+    color: transparent;
+    text-shadow:
+    0 0 0.3vw #FF5200,
+    0 0 0.521vw #FF5200;
+  } 3.67% {
+    /*2*/
+  color: white;
+  text-shadow:
+    0 0 0.3vw #fff,
+    0 0 0.521vw #fff,
+    0 0 1.094vw #fff,
+    0 0 2.188vw #FF5200,
+    0 0 4.271vw #FF5200,
+    0 0 4.792vw #FF5200,
+    0 0 5.313vw #FF5200,
+    0 0 7.865vw #FF5200;
+  } 10% {
+    /*1*/
+    opacity: 75%;
+    color: white;
+    text-shadow:
+      0 0 1vw #FF5200,
+      0 0 2vw #FF5200,
+      0 0 2.5vw #FF5200,
+      0 0 3vw #FF5200,
+      0 0 4vw #FF5200;
+  } 36.7% {
+    /*1*/
+    opacity: 75%;
+    color: white;
+    text-shadow:
+      0 0 1vw #FF5200,
+      0 0 2vw #FF5200,
+      0 0 2.5vw #FF5200,
+      0 0 3vw #FF5200,
+      0 0 4vw #FF5200;
+  } 37.3% {
+    /*3*/
+    opacity: 25%;
+    color: transparent;
+    text-shadow:
+    0 0 0.3vw #FF5200,
+    0 0 0.521vw #FF5200;
+  } 38% {
+    /*1*/
+    opacity: 75%;
+    color: white;
+    text-shadow:
+      0 0 1vw #FF5200,
+      0 0 2vw #FF5200,
+      0 0 2.5vw #FF5200,
+      0 0 3vw #FF5200,
+      0 0 4vw #FF5200;
+  } 40.67% {
+    /*3*/
+    opacity: 25%;
+    color: transparent;
+    text-shadow:
+    0 0 0.3vw #FF5200,
+    0 0 0.521vw #FF5200;
+  } 41.33% {
+    /*1*/
+    opacity: 75%;
+    color: white;
+    text-shadow:
+      0 0 1vw #FF5200,
+      0 0 2vw #FF5200,
+      0 0 2.5vw #FF5200,
+      0 0 3vw #FF5200,
+      0 0 4vw #FF5200;
+  } 60% {
+    /*2*/
+  color: white;
+  text-shadow:
+    0 0 0.3vw #fff,
+    0 0 0.521vw #fff,
+    0 0 1.094vw #fff,
+    0 0 2.188vw #FF5200,
+    0 0 4.271vw #FF5200,
+    0 0 4.792vw #FF5200,
+    0 0 5.313vw #FF5200,
+    0 0 7.865vw #FF5200;
+  } 80% {
+    /*1*/
+    opacity: 75%;
+    color: white;
+    text-shadow:
+      0 0 1vw #FF5200,
+      0 0 2vw #FF5200,
+      0 0 2.5vw #FF5200,
+      0 0 3vw #FF5200,
+      0 0 4vw #FF5200;
+  } 93.3% {
+    /*2*/
+  color: white;
+  text-shadow:
+    0 0 0.3vw #fff,
+    0 0 0.521vw #fff,
+    0 0 1.094vw #fff,
+    0 0 2.188vw #FF5200,
+    0 0 4.271vw #FF5200,
+    0 0 4.792vw #FF5200,
+    0 0 5.313vw #FF5200,
+    0 0 7.865vw #FF5200;
+  } 93.5% {
+    /*1*/
+    opacity: 75%;
+    color: white;
+    text-shadow:
+      0 0 1vw #FF5200,
+      0 0 2vw #FF5200,
+      0 0 2.5vw #FF5200,
+      0 0 3vw #FF5200,
+      0 0 4vw #FF5200;
+  } 98% {
+    /*3*/
+    opacity: 25%;
+    color: transparent;
+    text-shadow:
+    0 0 0.3vw #FF5200,
+    0 0 0.521vw #FF5200;
+  } 100% {
+    /*1*/
+    opacity: 75%;
+    color: white;
+    text-shadow:
+      0 0 1vw #FF5200,
+      0 0 2vw #FF5200,
+      0 0 2.5vw #FF5200,
+      0 0 3vw #FF5200,
+      0 0 4vw #FF5200;
+  }
+}
+
+/*bold weight*/
+b {
+  font-weight: 700;
+}
+/*book weight NON ITALIC*/
+i {
+  font-style: normal;
+  font-weight: 100;
+}
