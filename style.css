@@ -355,3 +355,27 @@ background: linear-gradient(0deg, rgba(255,27,0,1) 0%, rgba(251,75,2,1) 100%);
   width:100%;
   transition:800ms ease all;
 }
+
+
+
+
+
+
+
+a.button {
+  display: inline-block;
+  background: #2196f3;
+  color: #fff;
+  padding: 12px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: Tahoma;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 100;
+}
+
+div {
+  margin: 24px;
+  text-align: center;
+}
