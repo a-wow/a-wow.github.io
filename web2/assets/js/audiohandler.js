@@ -114,7 +114,7 @@ function getPositionInQueue() {
         }
     }
 
-    document.getElementById('queuePosition').innerHTML = 'Макс. Уровннь: 60';
+    document.getElementById('queuePosition').innerHTML = 'Макс. Уровень: 60';
     getEstimatedTime(number)
 }
 
