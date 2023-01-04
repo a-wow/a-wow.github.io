@@ -168,7 +168,7 @@ function switchExpansion() {
     logo.style.background = `url(${logoPath}/${expName}.png)`;
     version.textContent = verMap[expansion];
     date.textContent = dateMap[expansion];
-    copyright.textContent = `© Blizzard Entertainment 2004-${copyMap[expansion]} гг. Все права защищены.`;
+    copyright.textContent = `© Extazy WoW 2022-${copyMap[expansion]} гг. Все права защищены.`;
     setButtonColors(buttonColorMap[expansion]);
 
     bg.load();
