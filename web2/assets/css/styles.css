@@ -1,0 +1,316 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    cursor: url('../img/ui/Point.png'), auto;
+}
+
+@font-face {
+    font-family: 'FRIZQT';
+    src: url('../fonts/FRIZQT__.ttf');
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#background {
+    background-color: #000;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+#quitButtonContainer {
+    bottom: 10px;
+    right: 10px;
+    position: absolute;
+    z-index: 2;
+}
+
+#queueTextContainer {
+    position: fixed;
+    margin-bottom: 50px;
+    background-color: transparent;
+    width: 650px;
+    height: 110px;
+    line-height: 50%;
+    z-index: 2;
+}
+
+#dcTextContainer {
+    position: fixed;
+    margin-bottom: 25px;
+    background-color: transparent;
+    width: 650px;
+    height: 110px;
+    line-height: 50%;
+    z-index: 2;
+}
+
+#realmListButton {
+    margin-top: 95px;
+}
+
+#disconButton {
+    margin-top: 95px;
+}
+
+#copyrightText {
+    font-family: 'FRIZQT';
+    font-size: 15px;
+    text-align: left;
+    color: #ffc700;
+    text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 3px #000;
+}
+
+#buildDate {
+    position: fixed;
+    font-family: 'FRIZQT';
+    font-size: 15px;
+    text-align: left;
+    color: #ffc700;
+    text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 3px #000;
+    bottom: -8px;
+    left: 10px;
+}
+
+#buildVersion {
+    position: fixed;
+    font-family: 'FRIZQT';
+    font-size: 15px;
+    text-align: left;
+    color: #ffc700;
+    text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 3px #000;
+    bottom: 10px;
+    left: 10px;
+}
+
+#cursor {
+    z-index: 5;
+    position: fixed;
+    top: -50px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+}
+
+.queueText {
+    font-family: 'FRIZQT';
+    font-size: 22px;
+    text-align: center;
+    color: #ffc700;
+    text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 3px #000, 10px 10px 2px #0000;
+}
+
+.text {
+    font-family: 'FRIZQT';
+    font-size: 14px;
+    text-align: left;
+    color: #ffc700;
+    text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 3px #000, 10px 10px 2px #0000;
+}
+
+.UIBox {
+    position: fixed;
+    border: 40px solid;
+    border-image: url('../img/ui/UI_BorderAtlas.png') 40% round;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.UIBoxBackground {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.button {
+    font-family: 'FRIZQT';
+    font-size: 23px;
+    text-align: center;
+    color: #ffc700;
+    text-shadow: 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000;
+    background: url('../img/ui/buttons/button_idle.png') no-repeat top;
+    width: 270px;
+    height: 71px;
+    border: none;
+    outline: none;
+    display: block;
+    margin-top: -25px;
+    transform: scale(0.8);
+    filter: drop-shadow(0px 0px 8px #000);
+    z-index: 2;
+    cursor: url('../img/ui/Point.png'), auto;
+}
+
+.button:hover {
+    font-family: 'FRIZQT';
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000;
+    background: url('../img/ui/buttons/button_hover.png') no-repeat top;
+}
+
+.button:active {
+    font-family: 'FRIZQT';
+    font-size: 22px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000;
+    background: url('../img/ui/buttons/button_pressed.png') no-repeat top;
+}
+
+.button_b {
+    font-family: 'FRIZQT';
+    font-size: 23px;
+    text-align: center;
+    color: #ffc700;
+    text-shadow: 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000;
+    background: url('../img/ui/buttons/button_idle_b.png') no-repeat top;
+    width: 270px;
+    height: 71px;
+    border: none;
+    outline: none;
+    display: block;
+    margin-top: -25px;
+    transform: scale(0.8);
+    filter: drop-shadow(0px 0px 8px #000);
+    z-index: 2;
+    cursor: url('../img/ui/Point.png'), auto;
+}
+
+.button_b:hover {
+    font-family: 'FRIZQT';
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000;
+    background: url('../img/ui/buttons/button_hover_b.png') no-repeat top;
+}
+
+.button_b:active {
+    font-family: 'FRIZQT';
+    font-size: 22px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000, 0 0 8px #000;
+    background: url('../img/ui/buttons/button_pressed_b.png') no-repeat top;
+}
+
+.centered {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullWidth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.fullScreen {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.foreground {
+    z-index: 1;
+}
+
+.xPacButton {
+    z-index: 1;
+    position: absolute;
+    top: -30px;
+    left: -95px;
+    width: 633px;
+    height: 289px;
+    border: none;
+    outline: none;
+    display: inline-block;
+    background: url('../img/ui/logos/Shadowlands.png') no-repeat top;
+    background-color: transparent;
+    transform: scale(0.65);
+    transition: 0.2s;
+    filter: drop-shadow(0px 0px 6px #000);
+    cursor: url('../img/ui/Point.png'), auto;
+}
+
+.xPacButton:hover {
+    transform: scale(0.67);
+    filter: drop-shadow(0px 0px 10px #000);
+}
+
+.xPacButton:active {
+    transform: scale(0.64);
+    filter: drop-shadow(0px 0px 0px #000);
+}
+
+.slidecontainer {
+    width: 450px;
+    z-index: 4;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    height: 1px;
+    padding: 0px;
+    margin-left: 50%;
+    background: transparent;
+    border: 8px solid;
+    border-image: url('../img/ui/UI_SliderBorder.png') 35% round;
+    cursor: url('../img/ui/Point.png'), auto;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: .2s;
+    transform: scale(0.8);
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 32px;
+    height: 32px;
+    background: url('../img/ui/UI_SliderHandle.png');
+    cursor: url('../img/ui/Cast.png'), auto;
+    transform: scale(1.6);
+    border: none;
+    z-index: 4;
+}
+
+.slider::-moz-range-thumb {
+    width: 32px;
+    height: 32px;
+    background: url('../img/ui/UI_SliderHandle.png');
+    cursor: url('../img/ui/Cast.png'), auto;
+    transform: scale(1.6);
+    border: none;
+    z-index: 4;
+}
