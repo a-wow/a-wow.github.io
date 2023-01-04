@@ -131,16 +131,7 @@ function doDisconnect() {
     console.log("DC'd")
 }
 
-function manualChangeExpac() {
-    console.log("Changing xpac to: ");
-    expansion += 1;
-    if (expansion > 8)
-        expansion = 0;
 
-    var bg = document.getElementById('background');
-    bg.muted = false;
-    switchExpansion();
-}
 
 function switchExpansion() {
     if (disconnected) {
