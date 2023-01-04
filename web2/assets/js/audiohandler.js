@@ -114,13 +114,13 @@ function getPositionInQueue() {
         }
     }
 
-    document.getElementById('queuePosition').innerHTML = 'Место в очереди: ' + number;
+    document.getElementById('queuePosition').innerHTML = 'Макс. Уровннь: 60';
     getEstimatedTime(number)
 }
 
 function getEstimatedTime(qPos) {
     var time = Math.floor(Math.floor(qPos * 2 * 3 * 2 + ((qPos * 2 * 3 * 3) - (qPos * 2 * 3 * 2)) * Math.random()) * 0.01);
-    document.getElementById('queueTime').innerHTML = 'Время ожидания: ' + time + ' мин.';
+    document.getElementById('queueTime').innerHTML = 'Сервер с мини рисовками.';
 }
 
 function doDisconnect() {
