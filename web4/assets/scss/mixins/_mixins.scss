@@ -1,0 +1,134 @@
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Mixin: text
+//-------------------------------------------------------------------------------------------------------------------- //
+
+@mixin text($font-family, $font-weight, $color, $font-size, $line-height, $line-count: 0)
+{
+    @if $font-family != null {
+        font-family: $font-family;
+    }
+
+    @if $font-weight != null {
+        font-weight: $font-weight;
+    }
+
+    @if $color != null {
+        color: $color;
+    }
+
+    @if $font-size != null {
+        font-size: $font-size;
+    }
+
+    @if $line-height != null {
+        line-height: $line-height;
+    }
+
+    @if $line-count > 0 {
+        max-height: calc( #{$line-height} * #{$line-count} );
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: $line-count;
+        -webkit-box-orient: vertical;
+    }
+}
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Mixin: flex
+//-------------------------------------------------------------------------------------------------------------------- //
+
+@mixin flex-sbc()
+{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-sbs()
+{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+@mixin flex-sbe()
+{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+@mixin flex-cc()
+{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-cs()
+{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@mixin flex-ce()
+{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@mixin flex-sc()
+{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin flex-ss()
+{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+@mixin flex-se()
+{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+@mixin flex-ec()
+{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin flex-es()
+{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+@mixin flex-ee()
+{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
