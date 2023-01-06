@@ -1,0 +1,52 @@
+.flex-sbc, .flex-sbs, .flex-sbe,
+.flex-cc, .flex-cs, .flex-ce,
+.flex-sc, .flex-ss, .flex-se,
+.flex-ec, .flex-es, .flex-ee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex-sbc, .flex-sbs, .flex-sbe {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-cc, .flex-cs, .flex-ce {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-sc, .flex-ss, .flex-se {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.flex-ec, .flex-es, .flex-ee {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.flex-sbc, .flex-cc, .flex-sc, .flex-ec {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-sbs, .flex-cs, .flex-ss, .flex-es {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.flex-sbe, .flex-ce, .flex-se, .flex-ee {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
