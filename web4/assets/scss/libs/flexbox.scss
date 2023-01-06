@@ -1,0 +1,39 @@
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Flexbox
+//-------------------------------------------------------------------------------------------------------------------- //
+
+.flex-sbc, .flex-sbs, .flex-sbe,
+.flex-cc, .flex-cs, .flex-ce,
+.flex-sc, .flex-ss, .flex-se,
+.flex-ec, .flex-es, .flex-ee {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-sbc, .flex-sbs, .flex-sbe {
+	justify-content: space-between;
+}
+
+.flex-cc, .flex-cs, .flex-ce {
+	justify-content: center;
+}
+
+.flex-sc, .flex-ss, .flex-se {
+	justify-content: flex-start;
+}
+
+.flex-ec, .flex-es, .flex-ee {
+	justify-content: flex-end;
+}
+
+.flex-sbc, .flex-cc, .flex-sc, .flex-ec {
+	align-items: center;
+}
+
+.flex-sbs, .flex-cs, .flex-ss, .flex-es {
+	align-items: flex-start;
+}
+
+.flex-sbe, .flex-ce, .flex-se, .flex-ee {
+	align-items: flex-end;
+}
