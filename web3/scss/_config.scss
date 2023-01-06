@@ -1,0 +1,73 @@
+@import "mixins";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:regular,600');
+@import "fonts";
+
+// COLORS
+$color_white: #fff;
+$color_woodsmoke: #151616;
+$color_yellow: #FFEC9A;
+
+// ACCENT COLORS
+$accent: $color_yellow;
+
+// LAYOUT PALETTE COLORS
+$palette: $color_woodsmoke;
+
+// FONTS
+$fontFamily: Beaufortfor, sans-serif;
+$fontWeight: 400;
+$fontSize: 20px;
+$textColor: $color_white;
+$lineHeight: 1;
+
+// GRID
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1720;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+@import "null";
+body {
+  font-family: $fontFamily;
+  font-size: 100%;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  background-color: $palette;
+  color: $textColor;
+  line-height: $lineHeight;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  background: url('../img/bg/main_bg.jpg') top center /cover no-repeat;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1.0s ease 0s;
+  &._loaded {
+    opacity: 1;
+  }
+  @media (max-width: 1024px) {
+    background-position: left 30% center;
+  }
+  @media (max-width: $md4 + px) {
+    background-position: left 15% center;
+  }
+}
+
+._container {
+  max-width: $maxWidthContainer + px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  @media (max-width: 1600px) {
+    max-width: 1500px;
+  }
+}
