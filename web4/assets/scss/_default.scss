@@ -1,0 +1,396 @@
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Default styles
+//-------------------------------------------------------------------------------------------------------------------- //
+ 
+body{
+	background: #000;
+}
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Structure
+//-------------------------------------------------------------------------------------------------------------------- //
+
+.wrapper{ 
+	width: 100%;
+    max-width: 2600px;
+    min-width: 280px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+    &:after{
+        content: '';
+        width: 2600px;
+        height: 100%;
+        position: absolute;
+        z-index: 100;
+        top: 0px;
+        left: calc( ( 100% - 2600px ) / 2 );
+        pointer-events: none;
+
+        background: linear-gradient(
+            to right,
+            #000 0px,
+            rgba(0, 0, 0, 0) 300px,
+            rgba(0, 0, 0, 0) calc(100% - 300px),
+            #000 100%
+        );
+    }
+}
+
+header{
+    width: 100%;
+    position: relative;
+    z-index: 6;
+    background: url('../images/bg/header_bg.jpg') top center /cover no-repeat;
+
+    @media (max-width: 768px) {
+      background-position: top right 24.1%;
+    }
+
+    &:after{
+        content: '';
+        width: 100%;
+        height: 63px;
+        position: absolute;
+        z-index: 1;
+        left: 0px;
+        bottom: -46px;
+        background: url('../images/bg/sep_header_to_s1.png') center center no-repeat;
+        pointer-events: none;
+    }
+}
+
+section{
+    width: 100%;
+    position: relative;
+
+    h2{
+        width: 100%;
+        text-align: center;
+        @include text('Beaufort', 700, #f4e9cf, 64px, 64px);
+        text-shadow: 0px 3px 3px rgba(0, 0, 0, .3);
+        text-transform: uppercase;
+
+        @media (max-width: 1300px){
+            @include text('Beaufort', 700, #f4e9cf, 48px, 48px);
+        }
+
+        @media (max-width: 1024px){
+            @include text('Beaufort', 700, #f4e9cf, 34px, 34px);
+        }
+
+        span{
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            @include text('Open Sans', 700, #d9caab, 18px, 24px);
+            text-transform: none;
+
+            @media (max-width: 1300px){
+                @include text('Open Sans', 700, #d9caab, 16px, 22px);
+            }
+        }
+    }
+
+    &.features{
+        z-index: 5;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: url('../images/bg/section_1_bg.jpg') #1d0e09 top center /cover no-repeat;
+          @media (max-width: 1024px) {
+            background-position: top left;
+            opacity: 0.4;
+          }
+          @media (max-width: 768px) {
+            background-position: top left 30%;
+          }
+        }
+
+        h2{
+            color: #f4e9cf;
+            span{
+                color: #d9caab;
+            }
+        }
+
+        &:after{
+            content: '';
+            width: 100%;
+            height: 44px;
+            position: absolute;
+            z-index: 1;
+            left: 0px;
+            bottom: -27px;
+            background: url('../images/bg/sep_s1_to_s2.png') center center no-repeat;
+            pointer-events: none;
+        }
+    }
+
+    &.chronicle{
+        z-index: 4;
+        background: url('../images/bg/section_2_bg.jpg') #242017 top center /cover no-repeat;
+
+        h2{
+            color: #f4e9cf;
+            span{
+                color: #d9caab;
+            }
+        }
+
+        &:after{
+            content: '';
+            width: 100%;
+            height: 44px;
+            position: absolute;
+            z-index: 1;
+            left: 0px;
+            bottom: -27px;
+            background: url('../images/bg/sep_s2_to_s3.png') center center no-repeat;
+            pointer-events: none;
+        }
+    }
+
+    &.info-1{
+        z-index: 3;
+        background: url('../images/bg/section_3_bg.jpg') #020926 top center /cover no-repeat;
+
+        h2{
+            color: #f4e9cf;
+            span{
+                color: #d9caab;
+            }
+        }
+
+        &:after{
+            content: '';
+            width: 100%;
+            height: 44px;
+            position: absolute;
+            z-index: 1;
+            left: 0px;
+            bottom: -27px;
+            background: url('../images/bg/sep_s3_to_s4.png') center center no-repeat;
+            pointer-events: none;
+        }
+
+    }
+
+    &.info-2{
+        z-index: 2;
+        background: url('../images/bg/section_4_bg.jpg') #210a04 top center /cover no-repeat;
+
+        h2{
+            color: #f4e9cf;
+            span{
+                color: #d9caab;
+            }
+        }
+
+        &:after{
+            content: '';
+            width: 100%;
+            height: 72px;
+            position: absolute;
+            z-index: 1;
+            left: 0px;
+            bottom: -27px;
+            background: url('../images/bg/sep_s4_to_s5.png') center center no-repeat;
+            pointer-events: none;
+        }
+
+        &:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            bottom: -500px;
+            left: calc( ( 100% - 2600px ) / 2 );
+            background: url('../images/bg/sparks.png') center bottom 242px no-repeat;
+            pointer-events: none;
+        }
+    }
+
+    &.group{
+        z-index: 1;
+        background: url('../images/bg/footer_bg.jpg') #03070a top center /cover no-repeat;
+    }
+
+    &.info-general{
+        z-index: 2;
+
+        h2{
+            color: #f4e9cf;
+            span{
+                color: #9b9174;
+            }
+        }
+
+        &:after{
+            content: '';
+            width: 100%;
+            height: 28px;
+            position: absolute;
+            z-index: 1;
+            left: 0px;
+            bottom: -11px;
+            background: url('../images/bg/sep_s5_to_footer.png') center center no-repeat;
+            pointer-events: none;
+        }
+    }
+}
+
+header{
+    padding: 90px 0px;
+
+    @media (max-width: 1300px){
+        padding: 70px 0px;
+    }
+
+    @media (max-width: 1024px){
+        padding: 50px 0px;
+    }
+}
+
+section{
+    padding: 130px 0px;
+
+    @media (max-width: 1300px){
+        padding: 80px 0px;
+    }
+
+    @media (max-width: 1024px){
+        padding: 60px 0px;
+    }
+
+    &.group{
+        padding: 0px !important;
+    }
+}
+
+footer{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 100px 0px;
+
+    @media (max-width: 1300px){
+        padding: 70px 0px;
+    }
+
+    @media (max-width: 1024px){
+        padding: 50px 0px;
+    }
+}
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Content area
+//-------------------------------------------------------------------------------------------------------------------- //
+
+.content-area{
+  position: relative;
+  z-index: 10;
+    max-width: 1400px;
+    width: calc( 100% - 60px );
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+
+    @media (max-width: 1024px){
+        width: calc( 100% - 40px );
+    }
+}
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Icons
+//-------------------------------------------------------------------------------------------------------------------- //
+
+.icon{
+    width: 100px;
+    height: 100px;
+    @include flex-cc();
+    position: relative;
+    z-index: 1;
+
+    img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: contain;
+        object-position: center center;
+    }
+}
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// BG
+//-------------------------------------------------------------------------------------------------------------------- //
+
+.bg{
+    width: 100%;
+    height: 100%;
+    @include flex-cs();
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    &.gradient:after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+        top: 0px;
+        left: 0px;
+        pointer-events: none; 
+    }
+
+    &.gradient.blue:after{
+        background: linear-gradient(
+            to top,
+            rgba(24, 51, 67, 1) 0%,
+            rgba(24, 51, 67, .8) 40%,
+            rgba(24, 51, 67, .4) 70%,
+            rgba(24, 51, 67, 0) 100%
+        );
+    }
+
+    &.gradient.green:after{
+        background: linear-gradient(
+            to top,
+            rgba(27, 72, 33, 1) 0%,
+            rgba(27, 72, 33, .8) 40%,
+            rgba(27, 72, 33, .4) 70%,
+            rgba(27, 72, 33, 0) 100%
+        );
+    }
+
+    &.gradient.gray:after{
+        background: linear-gradient(
+            to top,
+            rgba(41, 41, 43, 1) 0%,
+            rgba(41, 41, 43, .8) 40%,
+            rgba(41, 41, 43, .4) 70%,
+            rgba(41, 41, 43, 0) 100%
+        );
+    }
+}

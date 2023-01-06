@@ -1,0 +1,1093 @@
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Mixins
+//-------------------------------------------------------------------------------------------------------------------- //
+ 
+@import 'mixins/mixins';
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Imports Libs
+//-------------------------------------------------------------------------------------------------------------------- //
+
+@import 'libs/fonts.scss';
+@import 'libs/reset.scss';
+@import 'libs/flexbox.scss';
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Imports others
+//-------------------------------------------------------------------------------------------------------------------- //
+
+@import 'default';
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Header
+//-------------------------------------------------------------------------------------------------------------------- //
+
+
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// block
+//-------------------------------------------------------------------------------------------------------------------- //
+
+
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// block
+//-------------------------------------------------------------------------------------------------------------------- //
+
+.header{
+    &__content{
+        width: 100%;
+        padding-right: calc( 100% / 3 );
+        position: relative;
+        z-index: 1;
+
+        @media (max-width: 1024px){
+            padding-right: 0px;
+        }
+    }
+
+    &__langs{
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        top: -70px;
+        right: 10px;
+        border: 2px solid #b54136;
+        border-radius: 50%;
+        z-index: 2;
+
+        @media (max-width: 1300px){
+            top: -50px;
+        }
+
+        @media (max-width: 1024px){
+            top: -30px;
+        }
+
+        &:after{
+            content: '';
+            width: 17px;
+            height: 17px;
+            position: absolute;
+            top: calc( ( 100% - 17px ) / 2 );
+            right: -20px;
+            background: url("../images/langs/arrow.png") center center no-repeat;
+            transition: transform .3s ease-in-out;
+        }
+
+        &.active:after{
+            transform: scale(1, -1);
+        }
+
+        &-current{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: filter .3s ease-in-out;
+
+            &:hover{
+                filter: brightness(130%);
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &-stroke{
+            position: absolute;
+            top: calc( 100% + 8px );
+            left: 50%;
+            transform: translateX(-50%) translateY(-35px);
+            list-style: none;
+            padding: 5px;
+            border-radius: 100px;
+            background: #f6f3ed;
+            transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+
+
+            li{
+                width: 33px;
+                height: 33px;
+                transition: filter .3s ease-in-out;
+
+                &:hover{
+                    filter: brightness(130%);
+                }
+
+                &:not(:last-child)
+                {
+                    margin-bottom: 5px;
+                }
+
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        &.active &-stroke{
+            transform: translateX(-50%) translateY(0%);
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+
+    &__logo{
+        width: 100%;
+        max-width: 501px;
+        margin: 0 auto;
+        transition: filter .3s ease-in-out;
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: 1300px){
+            max-width: 380px;
+        }
+
+        &:hover{
+            filter: brightness(130%);
+        }
+
+        img{
+            width: 100%;
+        }
+    }
+
+    &__info{
+        width: 100%;
+        padding: 0px calc( ( 100% - 770px ) / 2 );
+        margin-top: 1px;
+        position: relative;
+        z-index: 1;
+
+        @media (max-width: 1300px){
+            margin-top: 50px;
+        }
+
+        @media (max-width: 1024px){
+            margin-top: 30px;
+        }
+
+        &-title{
+            width: 100%;
+            @include text('Beaufort', 700, #ffeb9d, 56px, 48px);
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+
+            @media (max-width: 1300px){
+                @include text('Beaufort', 700, #ffeb9d, 42px, 42px);
+            }
+
+            @media (max-width: 1024px){
+                @include text('Beaufort', 700, #ffeb9d, 28px, 28px);
+            }
+        }
+
+        &-text{
+            width: 100%;
+            @include text('Open Sans', 400, #fff, 20px, 30px);
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+
+            @media (max-width: 1300px){
+                @include text('Open Sans', 400, #fff, 18px, 26px);
+            }
+
+            @media (max-width: 1024px){
+                @include text('Open Sans', 400, #fff, 16px, 22px);
+                margin-top: 10px;
+            }
+        }
+
+        &:after{
+            content: '';
+            width: 1315px;
+            height: 489px;
+            position: absolute;
+            z-index: 1;
+            top: calc( ( 100% - 489px ) / 2 );
+            left: calc( ( 100% - 1315px ) / 2 );
+            background: url('../images/bg/header_text_shadow.png') center center no-repeat;
+            background-size: 100% 100%;
+            opacity: 0.6;
+        }
+    }
+
+    &__button{
+        width: 406px;
+        height: 91px;
+        position: relative;
+        z-index: 2;
+        margin: 0 auto;
+        margin-top: 50px;
+        transition: filter .3s ease-in-out;
+
+        @media (max-width: 1300px){
+            width: 314px;
+            height: 70px;
+        }
+
+        @media (max-width: 1024px){
+            width: 244px;
+            height: 54px;
+            margin-top: 30px;
+        }
+
+        &:hover{
+            filter: brightness(120%);
+        }
+
+        img{
+            width: 488px;
+            height: 203px;
+            position: absolute;
+            top: -57px;
+            left: -41px;
+            z-index: 1;
+            pointer-events: none;
+
+            @media (max-width: 1300px){
+                width: 375px;
+                height: 156px;
+                top: -47px;
+                left: -30px;
+            }
+
+            @media (max-width: 1024px){
+                width: 292px;
+                height: 121px;
+                top: -37px;
+                left: -24px;
+            }
+        }
+
+        span{
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            @include text('Beaufort', 700, #482512, 32px, 32px);
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 0px 1px 0px rgba(255,255,255,0.7), 0px 0px 10px #ffd000, 0px 0px 20px #ffd000;
+        
+            @media (max-width: 1300px){
+                @include text('Beaufort', 700, #482512, 26px, 26px);
+            }
+
+            @media (max-width: 1024px){
+                @include text('Beaufort', 700, #482512, 20px, 20px);
+            }
+        }
+    }
+
+    &__socials{
+        width: 100%;
+        margin-top: 30px;
+
+        a{
+            width: 58px;
+            height: 58px;
+            position: relative;
+            z-index: 1;
+            margin: 10px;
+            transition: filter .3s ease-in-out;
+
+            @media (max-width: 1024px){
+                width: 38px;
+                height: 36px;
+            }
+
+            &:hover{
+                filter: brightness(120%);
+            }
+
+            img{
+                width: 93px;
+                height: 93px;
+                position: absolute;
+                top: -16px;
+                left: -18px;
+                z-index: 1;
+                pointer-events: none;
+
+                @media (max-width: 1024px){
+                    width: 62px;
+                    height: 62px;
+                    top: -11px;
+                    left: -12px;
+                }
+            }
+        }
+    }
+}
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Features
+//-------------------------------------------------------------------------------------------------------------------- //
+
+.features{
+
+    &__content{
+        padding-left: calc( 100% / 3 );
+
+        @media (max-width: 1300px){
+            padding-left: calc( 100% / 4 );
+        }
+
+        @media (max-width: 1024px){
+            padding-left: 0px;
+        }
+    }
+
+    &__play{
+        width: 191px;
+        height: 112px;
+        position: absolute;
+        top: 450px;
+        left: calc( ( ( ( 100% / 3 ) - 191px ) / 2 ) - 70px );
+        cursor: pointer;
+        transition: transform .3s ease-in-out;
+
+        @media (max-width: 1024px){
+            width: 140px;
+            height: 82px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    &__info{
+        width: 100%;
+
+        &:not(:first-child){
+            margin-top: 54px;
+
+            @media (max-width: 1300px){
+                margin-top: 44px;
+            }
+
+            @media (max-width: 1024px){
+                margin-top: 30px;
+            }
+        }
+
+        h3{
+            width: 100%;
+            display: block;
+            @include text('Beaufort', 700, #ffeb9d, 34px, 34px);
+            text-align: center;
+            text-transform: uppercase;
+
+            @media (max-width: 1300px){
+                @include text('Beaufort', 700, #ffeb9d, 28px, 28px);
+            }
+
+            @media (max-width: 1024px){
+                @include text('Beaufort', 700, #ffeb9d, 22px, 22px);
+            }
+
+            &:not(:first-child){
+                margin-top: 30px;
+
+                @media (max-width: 1300px){
+                    margin-top: 20px;
+                }
+
+                @media (max-width: 1024px){
+                    margin-top: 15px;
+                }
+            }
+        }
+
+        p{
+            width: 100%;
+            display: block;
+            @include text('Open Sans', 400, #eadfce, 20px, 30px);
+            text-align: center;
+
+            @media (max-width: 1300px){
+                @include text('Open Sans', 400, #eadfce, 18px, 28px);
+            }
+
+            @media (max-width: 1024px){
+                @include text('Open Sans', 400, #eadfce, 16px, 26px);
+            }
+
+            &:not(:first-child){
+                margin-top: 20px;
+
+                @media (max-width: 1300px){
+                    margin-top: 15px;
+                }
+
+                @media (max-width: 1024px){
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    &__items{
+        width: 100%;
+
+        &:not(:first-child){
+            margin-top: 70px;
+
+            @media (max-width: 1300px){
+                margin-top: 50px;
+            }
+
+            @media (max-width: 1024px){
+                margin-top: 30px;
+            }
+
+            @media (max-width: 680px){
+                padding: 0px calc( ( 100% - 280px ) / 2 );
+            }
+        }
+
+        &-list{
+            width: calc( 100% + 30px );
+            margin: -15px;
+
+            @media (max-width: 1024px){
+                width: calc( 100% + 20px );
+                margin: -10px;
+            }
+
+            .bg{
+                transition: transform .3s ease-in-out;
+            }
+
+            &-item{
+                width: calc( ( 100% / 3 ) - 30px );
+                height: 380px;
+                margin: 15px;
+                position: relative;
+                background: #282828;
+                border-radius: 5px;
+                overflow: hidden;
+                cursor: pointer;
+
+                @media (max-width: 1300px){
+                    height: 300px;
+                }
+
+                @media (max-width: 1024px){
+                    width: calc( ( 100% / 3 ) - 20px );
+                    margin: 10px;
+                }
+
+                @media (max-width: 680px){
+                    width: calc( ( 100% / 1 ) - 20px );
+                }
+                
+                &-content{
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    z-index: 2;
+                    padding: 20px;
+
+                    transform: translateY(196px);
+                    transition: transform .3s ease-in-out;
+
+                    @media (max-width: 1300px){
+                        transform: translateY(120px);
+                    }
+
+                    @media (max-width: 1024px){
+                        transform: translateY(150px);
+                    }
+
+                    .icon{
+                        width: 120px;
+                        height: 120px;
+                        margin: -10px auto;
+
+                        @media (max-width: 1024px){
+                            height: 100px;
+                        }
+                    }
+
+                    h4{
+                        @include text('Beaufort', 700, #fff, 30px, 30px);
+                        text-align: center;
+                        text-transform: uppercase;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
+                        @media (max-width: 1300px){
+                            @include text('Beaufort', 700, #fff, 24px, 24px);
+                        }
+
+                        @media (max-width: 1024px){
+                            @include text('Beaufort', 700, #fff, 20px, 20px);
+                        }
+                    }
+
+                    &-text{
+                        width: 100%;
+                        margin-top: 10px;
+                        @include text('Open Sans', 400, #eadfce, 16px, 24px, 8);
+                        text-align: center;
+
+                        transform: translateY(20px);
+                        opacity: 0;
+                        transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+
+                        @media (max-width: 1300px){
+                            @include text('Open Sans', 400, #eadfce, 16px, 24px, 5);
+                        }
+
+                        @media (max-width: 1024px){
+                            @include text('Open Sans', 400, #eadfce, 16px, 24px, 6);
+                        }
+                    }
+                }
+
+                &:hover &-content{
+                    transform: translateY(0px);
+
+                    &-text{
+                        transform: translateY(0px);
+                        opacity: 1;
+                    }
+                }
+
+                &:hover .bg{
+                    transform: scale(1.05);
+                }
+            }      
+        }
+    }
+}
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Chronicle
+//-------------------------------------------------------------------------------------------------------------------- //
+
+.chronicle{
+
+    &__list{
+        width: calc( 100% + ( 25% - 230px ) );
+        margin: 0px calc( ( ( 25% - 230px ) * -1 ) / 2 );
+
+        @media (max-width: 1024px){
+            width: 100%;
+            margin: 0px;
+        }
+
+        &:not(:first-child){
+            margin-top: 290px;
+
+            @media (max-width: 1024px){
+                margin-top: 100px;
+            }
+        }
+
+        &-item{
+            width: 25%;
+            align-self: stretch;
+            padding: 15px;
+            position: relative;
+            z-index: 2;
+            padding-bottom: 140px;
+
+            @media (max-width: 1024px){
+                width: 100%;
+                padding-bottom: 50px;
+            }
+
+            &:not(:last-child){
+                @media (max-width: 1024px){
+                    padding-bottom: 100px;
+                }
+            }
+
+            &-icon{
+                width: 100%;
+                margin: -50px 0px;
+
+                img{
+                    height: 200px;
+                    display: block;
+                }
+            }
+
+            &-game{
+                width: 100%;
+                @include text('Open Sans', 700, #fff, 17px, 18px);
+                text-align: center;
+                text-transform: uppercase;
+                margin-top: 20px;
+            }
+
+            &:first-child &-game{
+                @media (max-width: 1024px){
+                    margin-top: -20px;
+                }
+            }
+
+            &-chronicle{
+                width: 100%;
+                @include text('Open Sans', 700, #fedc0b, 17px, 18px);
+                text-align: center;
+                text-transform: uppercase;
+                margin-top: 5px;
+            }
+
+            &-point{
+                // width: 140px;
+                // height: 140px;
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                left: calc( ( 100% - 200px ) / 2 );
+                bottom: -55px;
+                pointer-events: none;
+
+                @media (max-width: 1024px){
+                    width: 70px;
+                    height: 70px;
+                    left: calc( ( 100% - 70px ) / 2 );
+                    bottom: 35px;
+                }
+
+                &-bg{
+                  position: relative;
+                  z-index: 1;
+                  width: 100%;
+                  height: 100%;
+                }
+
+                &-active{
+                    width: 145px;
+                    height: 145px;
+                    position: absolute;
+                    z-index: 2;
+                    top: calc( ( 100% - 150px ) / 2 );
+                    left: calc( ( 100% - 132px ) / 2 );
+                    display: none;
+
+                    @media (max-width: 1024px){
+                        width: 70px;
+                        height: 70px;
+                        top: calc( ( 100% - 70px ) / 2 );
+                        left: calc( ( 100% - 70px ) / 2 );
+                    }
+                }
+            }
+
+            &:last-child &-point{
+                @media (max-width: 1024px){
+                    width: 70px;
+                    height: 70px;
+                    left: calc( ( 100% - 70px ) / 2 );
+                    bottom: -14px;
+                }
+            }
+
+            &.active &-point{
+                &-active{
+                    display: block;
+                }
+            }
+
+            &:nth-child(1)::after,
+            &:nth-child(2)::after,
+            &:nth-child(3)::after {
+              content: '';
+              position: absolute;
+              right: calc( ( 100% - 86px ) / 2 * -1 );
+              width: calc( 100% - 100px );
+              height: 100%;
+              pointer-events: none;
+              @media (max-width: 1024px){
+                display: none;
+              }
+            }
+            &:nth-child(1)::after {
+              top: 86px;
+              background: url('../images/chronicles/step_1.png') center center /contain no-repeat;
+            }
+            &:nth-child(2)::after {
+              top: 151px;
+              background: url('../images/chronicles/step_2.png') center center /contain no-repeat;
+            }
+            &:nth-child(3)::after {
+              top: 156px;
+              background: url('../images/chronicles/step_3.png') center center /contain no-repeat;
+            }
+
+            &:not(:last-child):before{
+                content: '';
+                width: calc( 100% + 40px );
+                height: 113px;
+                position: absolute;
+                bottom: 20px;
+                right: -20px;
+                background: url('../images/chronicles/arrow.png') center center no-repeat;
+                pointer-events: none;
+                display: none;
+
+                @media (max-width: 1024px){
+                    display: block;
+                }
+            }
+        }
+    }
+
+}
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Info
+//-------------------------------------------------------------------------------------------------------------------- //
+
+.info-1{
+    
+    &__content{
+        width: 100%;
+        margin-top: 50px;
+
+        @media (max-width: 1024px){
+            margin-top: 40px;
+        }
+    }
+
+}
+
+.info-2{
+  &__content{
+    width: 100%;
+    margin-top: 80px;
+
+    @media (max-width: 1024px){
+      margin-top: 50px;
+    }
+  }
+}
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Info-list
+//-------------------------------------------------------------------------------------------------------------------- //
+
+.info-list{
+    width: 100%;
+
+    &__items{
+        width: calc( 100% + 30px );
+        margin: -40px -15px;
+
+        @media (max-width: 1024px){
+            width: calc( 100% + 20px );
+            margin: -20px -10px;
+        }
+
+        &-item{
+            width: calc( ( 100% / 4 ) - 30px );
+            margin: 40px 15px;
+            align-self: stretch;
+            position: relative;
+            cursor: pointer;
+
+            @media (max-width: 1024px){
+                width: calc( ( 100% / 4 ) - 20px );
+                margin: 20px 10px;
+            }
+
+            @media (max-width: 860px){
+                width: calc( ( 100% / 3 ) - 20px );
+            }
+
+            @media (max-width: 740px){
+                width: calc( ( 100% / 2 ) - 20px );
+            }
+
+            @media (max-width: 560px){
+                width: calc( ( 100% / 1 ) - 20px );
+            }
+
+            &-icon{
+                width: 100%;
+                height: auto;
+                position: relative;
+                z-index: 2;
+                margin: -30px auto;
+
+                @media (max-width: 1300px){
+                    margin: -20px auto;
+                }
+
+                img{
+                    width: 248px;
+                    height: 248px;
+
+                    @media (max-width: 1300px){
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+            }
+
+            &-title{
+                width: 100%;
+                @include text('Open Sans', 700, #ffdf61, 22px, 24px);
+                text-align: center;
+                text-transform: uppercase;
+                margin-top: 15px;
+                position: relative;
+                z-index: 2;
+                transition: color .3s ease-in-out;
+
+                @media (max-width: 1300px){
+                    @include text('Open Sans', 700, #ffdf61, 18px, 22px);
+                }
+            }
+
+            &:hover &-title{
+                color: #fff;
+            }
+
+            &:after{
+                content: '';
+                width: 100%;
+                height: 120%;
+                border-radius: 50%;
+                position: absolute;
+                top: -10%;
+                left: 0px;
+                background: #000;
+                filter: blur(50px);
+                opacity: 0;
+                transition: opacity .3s ease-in-out;
+            }
+
+            &:hover:after{
+                opacity: .35;
+            }
+        }
+    }
+
+    &.borders &__items{
+        &-item{
+            &-title{
+                margin-top: 35px;
+            }
+        }
+    }
+}
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Info General
+//-------------------------------------------------------------------------------------------------------------------- //
+
+.info-general{
+    &__content{
+        width: 100%;
+        margin-top: 90px;
+
+        @media (max-width: 1300px){
+            margin-top: 60px;
+        }
+
+        @media (max-width: 1024px){
+            margin-top: 40px;
+        }
+    }
+
+    &__list{
+        width: calc( 100% + 30px );
+        margin: -40px -15px;
+
+        @media (max-width: 1300px){
+            margin: -20px -15px;
+        }
+
+        @media (max-width: 1024px){
+            width: calc( 100% + 20px );
+            margin: -20px -10px;
+        }
+        
+        &-col{
+            width: calc( ( 100% / 3 ) - 30px );
+            margin: 40px 15px;
+            align-self: stretch;
+
+            @media (max-width: 1300px){
+                margin: 20px 15px;
+            }
+
+            @media (max-width: 1024px){
+                width: calc( ( 100% / 3 ) - 20px );
+                margin: 20px 10px;
+            }
+
+            @media (max-width: 780px){
+                width: calc( ( 100% / 2 ) - 20px );
+            }
+
+            @media (max-width: 600px){
+                width: calc( ( 100% / 1 ) - 20px );
+            }
+        }
+
+        &-item{
+            width: 100%;
+            max-width: 350px;
+
+            &-img{
+                width: 100%;
+                height: 130px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 5px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    object-fit: cover;
+                    object-position: top center;
+                }
+            }
+
+            &-title{
+                width: 100%;
+                @include text('Beaufort', 700, #ffde60, 32px, 34px);
+                text-align: center;
+                text-transform: uppercase;
+                margin-top: 20px;
+
+                @media (max-width: 1300px){
+                    @include text('Beaufort', 700, #ffde60, 24px, 30px);
+                }
+
+                @media (max-width: 1024px){
+                    @include text('Beaufort', 700, #ffde60, 20px, 24px);
+                }
+            }
+
+            &-text{
+                width: 100%;
+                @include text('Open Sans', 500, #eadfce, 16px, 26px);
+                text-align: center;
+                margin-top: 10px;
+
+                @media (max-width: 1024px){
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+}   
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Footer
+//-------------------------------------------------------------------------------------------------------------------- //
+
+.footer{
+
+    &__title{
+        width: 100%;
+        @include text('Open Sans', 600, #a5a4a3, 14px, 14px);
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__text{
+        width: 100%;
+        @include text('Open Sans', 600, #605b55, 12px, 18px);
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .unsimple{
+        display: block;
+        width: 152px;
+        height: 30px;
+        opacity: 0.7;
+        transition: opacity .3s ease-in-out;
+        margin: 30px auto 0px;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+//----------------------------------------------------------------------------------------------------- Unsimple Group //
+// Video
+//-------------------------------------------------------------------------------------------------------------------- //
+
+.video-wnd{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(27, 21, 18, 0.9);
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease-in-out;
+    padding: 20px;
+    overflow-y: scroll;
+
+    &.active{
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    &__box{
+        width: 800px;
+        height: 500px;
+        position: relative;
+        background: #000;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: auto;
+    }
+
+    &__navigation{
+        width: 100%;
+        margin-top: auto;
+        margin-bottom: 20px;
+    }
+
+    &__cancel{
+        width: 30px;
+        height: 30px;
+        transition: transform .5s ease-in-out;
+        cursor: pointer;
+
+        &:hover{
+            transform: rotate(360deg);
+        }
+    }
+}
