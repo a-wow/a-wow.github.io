@@ -1,5 +1,5 @@
 <?php
-$bd_server = 'localhost'; $bd_login = 'michylov22'; $bd_pass = 'Mauzer$19'; $bd_name = 'michylov22';
+$bd_server = 'sql8.freesqldatabase.com'; $bd_login = 'sql8588830'; $bd_pass = 'cfLR9j8VKQ'; $bd_name = 'sql8588830';
 $bsd = mysqli_connect($bd_server, $bd_login, $bd_pass)//параметры в скобках ("хост", "имя пользователя", "пароль")
 or die("<p>Ошибка подключения к базе данных!</p>");
 mysqli_select_db($bsd, $bd_name)//параметр в скобках ("имя базы, с которой соединяемся")
