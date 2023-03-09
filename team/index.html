@@ -1,0 +1,342 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WoWnull</title>
+<meta name="copyrighted-site-verification" content="70817ed1068519df">
+<meta property="og:title" content="WoWnull - a new journey across the universe!">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gohbot.space/">
+<meta property="og:image" content="../images/logo.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="64">
+<meta property="og:image:height" content="64">
+<meta property="og:description" content="Isn't it great when you can create an amazing story with WoWnull?">
+<meta name="theme-color" content="#3f4eed">
+
+<link rel="shortcut icon" href="images/logo.png" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/line.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap">
+</head>
+<body><noscript>Enable JavaScript!!!</noscript><br>
+<header class="header" data-header>
+<div class="container">
+<a href="/#" class="logo"><h1>WoWnull</h1>
+</a>
+<nav class="navbar" data-navbar>
+<div class="navbar-top">
+<a href="/#" class="logonavbar"><h2>GoH</h2>
+</a>
+<button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+<ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+</button>
+</div>
+<ul class="navbar-list">
+<li>
+<a href="/#" class="navbar-link">Home</a>
+</li>
+<li>
+<a href="/team" class="navbar-link">Team</a>
+</li>
+<li>
+<a href="/docs" class="navbar-link">Documentation</a>
+</li>
+<!--- <li>
+<a href="/support" class="other-link">Support Server</a>
+</li>
+<li>
+<a href="/dashboard" class="btn btn-other">Dashboard</a>
+</li> --->
+<li>
+</li>
+</ul>
+</nav>
+<button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+<ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+</button>
+<div class="overlay" data-overlay data-nav-toggler>
+</div>
+</div>
+</header>
+
+
+<link rel="stylesheet" href="css/all.min.css">
+
+<br><br>
+<main>
+<article>
+<br>
+<section class="heroo" aria-label="home">
+<div class="container">
+<div class="heroo-content">
+<h1 class="h1 hero-title">Team WoWnull&nbsp;<marrk>BETA</marrk></h1>
+<p class="text2">On this page you will see who is developing the project, who supports it, and so on. Learn more about these wonderful people!</p>
+<noscript><h1 class="h1 hero-title" style="
+    color: #e54e4e;
+    font-size: 30px;
+    max-width: 590px;
+    line-height: 40px;
+">This page doesn't work because you don't have JavaScript enabled in your browser! Turn it on!!</h1></noscript><br>
+<main>
+<div class="cards"><div class="card">
+      <div class="title">
+        <div class="avatar">
+         <!--- <img src="images/a_b8654cef5590fa110d8b8f0cd81d3840.gif" alt="Avatar"> --->
+        </div>
+        <div class="username">null<span>#7024</span></div>
+      </div>
+      <div class="content">
+        <div class="roles">
+          Position
+          <hr>
+          <div class="__roles">
+            <div class="role" style="background:#2d50cd;">BACKEND DEVELOPER</div> <div class="role" style="background:#373bb7;">COMMUNITY MANAGER</div> <div class="role" style="background:#a93d2f;">FOUNDER</div>
+          </div>
+          <div class="contacts">
+            <a href="https://t.me/nulls18" "><i class="fa-brands fa-telegram" style="color: #5297ffef"></i></a> <a href="https://discord.com/users/416812391003586571/" "><i class="fa-brands fa-discord" style="color: #4a7dfff1"></i></a>
+	
+          </div>        
+        </div>
+      </div>
+    </div><div class="card">
+      <div class="title">
+        <div class="avatar">
+         <!--- <img src="images/4a2e5730e1cf073f993bd1cb13bd301b.png" alt="Avatar"> --->
+        </div>
+        <div class="username">jk(Павел)<span>#6752</span></div>
+      </div>
+      <div class="content">
+        <div class="roles">
+          Position
+          <hr>
+          <div class="__roles">
+             <div class="role" style="background:#9f6e24;">DONATORS</div> <div class="role" style="background:#373bb7;">IDEA GENERATOR</div>
+          </div>
+          <div class="contacts">
+            <a href="https://discord.com/users/1010928447201222736/" "><i class="fa-brands fa-discord" style="color: #4a7dfff1"></i></a> <a href="https://t.me/#" "><i class="fa-brands fa-telegram" style="color: #5297ffef"></i></a>
+	
+          </div>        
+        </div>
+      </div>
+    </div></div>
+</main>
+</div>
+</div>
+</section>
+<script>const cards = document.querySelector(".cards");
+
+
+function initRoles(roles_list) {
+    let formatted_roles = [];
+    roles_list.forEach(role => {
+        formatted_roles.push(`<div class="role" style="background:${roles[role]};">${role.replace("_", " ").toUpperCase()}</div>`)
+    })
+
+    return formatted_roles.join(" ");
+}
+
+function initContacts(contacts) {
+    let formatted_contacts = [];
+    Object.entries(contacts).forEach(key_value => {
+        const key = key_value[0]
+        const value = key_value[1]
+        formatted_contacts.push(`<a href="${value}""><i class="fa-brands fa-${key}" style="color: ${accounts[key]}"></i></a>`)
+    })
+
+    return formatted_contacts.join(" ")
+}
+        
+    window.onload = (e) => {
+    users.forEach(user => {
+        cards.innerHTML += `<div class="card">
+      <div class="title">
+        <div class="avatar">
+          <img src="${user.avatar}" alt="Avatar">
+        </div>
+        <div class="username">${user.username}<span>#${user.tag}</span></div>
+      </div>
+      <div class="content">
+        <div class="roles">
+          Position
+          <hr>
+          <div class="__roles">
+            ${initRoles(user.roles)}
+          </div>
+          <div class="contacts">
+            ${initContacts(user.accounts)}
+	
+          </div>        
+        </div>
+      </div>
+    </div>`
+    })  
+        
+        
+};
+        
+</script>
+<style>
+.cards {
+    display: grid;
+    gap: 48px;
+    grid-template-columns: repeat(3, 330px);
+}
+
+ @media (max-width: 740px) {
+ .cards {
+    display: block;
+    margin-bottom: 25px;
+}
+} 
+
+ @media (max-width: 740px) {
+.card {
+    background-color: #24243a94;
+    padding: 15px;
+    border-radius: 7px;
+    width: 360px;
+    margin-bottom: 20px;
+}
+}
+            
+.card {
+    background-color: #24243a94;
+    padding: 15px;
+    border-radius: 7px;
+    width: 360px;
+}
+
+.title {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 17px;
+}
+
+.avatar img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.username span {
+    color: slategrey;
+}
+
+ .username {
+    color: #ededed;
+    display: flex
+}
+            
+.content {
+    margin-top: 10px;
+}
+
+.roles {
+    color: darkgrey;
+    font-family: var(--ff-poppins);
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: none;
+    border-top: 2px solid #aaa;
+    margin: .5em 0;
+    padding: 0;
+}
+
+.role {
+    font-weight: bold;
+    width: fit-content;
+    padding: 4px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-family: var(--ff-poppins);
+    font-weight: 700;
+}
+
+.__roles {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    color: #d9d9d9
+}
+
+.contacts {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.contacts a {
+    font-size: 28px;
+    height: auto;
+}
+
+.contacts a i {
+    color: red;
+}
+        
+        * {
+    margin: 0;
+    padding: 0;
+}</style>
+<br> <br> <br>
+<footer class="footer">
+<br>
+<div class="footer-bottom">
+<div class="container">
+<p class="copyright"> © WoWnull <script>document.write(/\d{4}/.exec(Date())[0])</script>. All rights reserved. <br>
+ <b></b>
+</p>
+
+<ul class="footer-bottom-list">
+<li> <a href="/team" class="footer-bottom-link">Team WoWnull</a> </li>
+<li> <a href="https://docs.gohbot.space/" class="footer-bottom-link">Documentation</a> </li>
+</ul>
+<br>
+
+</div>
+</div>
+<br> </footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-591PBJG10X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-591PBJG10X');
+</script>
+<script src="js/script.js" defer></script>
+<script src="js/iconify-icon.min.js"></script>
+<script type="module" src="js/ionicons.esm.js"></script>
+<script nomodule src="js/ionicons.js"></script>
+<style>
+year {
+    animation: background-pan 6s linear infinite;
+    background: linear-gradient( to right, #6f7ffbe0, #8589fffc, #5591fffa, #6f7ffbe0);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    position: relative;
+}
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: -200% center;
+  }
+}
+.bg-blue {
+    background-color: #0b0e1ea1;
+}</style>
+
+
+</article></main></body></html>
